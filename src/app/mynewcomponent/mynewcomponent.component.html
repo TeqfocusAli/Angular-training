@@ -1,0 +1,9 @@
+<p>mynewcomponent works!</p>
+
+<button (click)="sendData()">Send msg to parent</button>
+
+<ul class="list-group">
+  <li *ngFor="let user of users" class="list-group-item">
+    {{ user.name }} --{{ user.address.street }} --{{ user.address.geo.lat }}
+  </li>
+</ul>

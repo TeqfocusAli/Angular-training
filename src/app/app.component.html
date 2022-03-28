@@ -1,0 +1,63 @@
+<!-- <app-first-component [data]="message"> </app-first-component>
+
+<p>Event: {{ msgFromChild }}</p>
+
+<app-mynewcomponent (event)="messageFromChild($event)"></app-mynewcomponent> -->
+<h1>
+  <a routerLink=""
+    ><img
+      src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg"
+      width="50"
+      align="left"
+      style="margin-right: 10px"
+  /></a>
+  Angular Training session
+</h1>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <!-- <ul>
+        <li>
+          <a routerLink="/about/subpage" routerLinkActive="active">Sub page</a>
+        </li>
+        <li>
+          <a routerLink="/about/sublist" routerLinkActive="active">Sub List</a>
+        </li>
+      </ul> -->
+    </li>
+    <li><a routerLink="/service" routerLinkActive="active">Service</a></li>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+
+    <li><a routerLink="user" routerLinkActive="active"> User</a></li>
+    <li>
+      <a routerLink="template-driven-form" routerLinkActive="active"
+        >Template driven forms</a
+      >
+    </li>
+    <li>
+      <a routerLink="reactive-forms" routerLinkActive="active"
+        >Reactive forms</a
+      >
+    </li>
+    <li>
+      <a routerLink="parent" routerLinkActive="active">Parent</a>
+    </li>
+    <li>
+      <a routerLink="hooks" routerLinkActive="active">Hooks</a>
+    </li>
+    <li>
+      <a routerLink="features" routerLinkActive="active">Features</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- <input #phone placeholder="phone number" /> -->
+
+<!-- lots of other elements -->
+
+<!-- phone refers to the input element; pass its `value` to an event handler -->
+<!-- <button type="button" (click)="callPhone(phone.value)">Call</button> -->
+<div style="padding: 10px">
+  <router-outlet></router-outlet>
+</div>

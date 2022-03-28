@@ -1,0 +1,23 @@
+<div class="bg-dark text-white p-5">
+  <p>Parent page01!</p>
+
+  <!-- {{ dataOfChild }} -->
+  <input type="text" class="form-control" value="" #city />
+  <button (click)="getCity(city)" class="btn btn-danger mt-3 col-md-3">
+    Click
+  </button>
+</div>
+
+<div class="bg-light p-5">
+  <app-son [city]="cityName">
+    <!--Content projection-->
+    <h1 id="head" #chHead>My 1st Son Ravi</h1>
+  </app-son>
+</div>
+<!-- 
+<div class="bg-dark text-white p-5">
+  <app-son>
+    <h1 id="head" #chHead>Hello guys</h1>
+    <h1 id="subhead" #chHead>This is second section</h1>
+  </app-son>
+</div> -->

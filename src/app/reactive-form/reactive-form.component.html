@@ -1,0 +1,142 @@
+<h1>Reactive form! with formControl</h1>
+
+<label for="name">Name:</label>
+<input
+  class="form-control"
+  id="name"
+  type="text"
+  [formControl]="name"
+  required
+/>
+
+<input class="form-control my-3" id="name" type="text" [formControl]="email" />
+
+<button type="button" (click)="updateName()" class="btn btn-primary">
+  Update Name
+</button>
+
+<h1>Reactive form! with FormGroup</h1>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label for="first-name">First Name: </label>
+  <input
+    class="form-control"
+    id="first-name"
+    type="text"
+    formControlName="firstName"
+  />
+
+  <label for="last-name">Last Name: </label>
+  <input
+    class="form-control"
+    id="last-name"
+    type="text"
+    formControlName="lastName"
+  />
+  <p>Complete the form to enable button.</p>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+<h1>Reactive form! with nested group</h1>
+
+<form [formGroup]="nestedProfileForm" (ngSubmit)="onSubmit()">
+  <label for="first-name">First Name: </label>
+  <input
+    class="form-control"
+    id="first-name"
+    type="text"
+    required
+    formControlName="firstName"
+  />
+
+  <label for="last-name">Last Name: </label>
+  <input
+    class="form-control"
+    id="last-name"
+    type="text"
+    formControlName="lastName"
+  />
+
+  <div formGroupName="address">
+    <h2>Address</h2>
+
+    <label for="street">Street: </label>
+    <input
+      class="form-control"
+      id="street"
+      type="text"
+      formControlName="street"
+    />
+
+    <label for="city">City: </label>
+    <input class="form-control" id="city" type="text" formControlName="city" />
+
+    <label for="state">State: </label>
+    <input
+      class="form-control"
+      id="state"
+      type="text"
+      formControlName="state"
+    />
+
+    <label for="zip">Zip Code: </label>
+    <input class="form-control" id="zip" type="text" formControlName="zip" />
+  </div>
+
+  <button type="submit" [disabled]="!nestedProfileForm.valid">Submit</button>
+  <button type="button" (click)="updateProfile()">Update Profile</button>
+</form>
+
+<h1>Reactive form! with From builder</h1>
+
+<form [formGroup]="formBuilderProfileForm" (ngSubmit)="onSubmit()" novalidate>
+  <label for="first-name">First Name: </label>
+  <input
+    class="form-control"
+    id="first-name"
+    type="text"
+    formControlName="firstName"
+  />
+
+  <label for="last-name">Last Name:</label>
+  <br />
+  <input
+    class="form-control"
+    id="last-name"
+    type="text"
+    formControlName="lastName"
+  />
+
+  <div formGroupName="address">
+    <h2>Address</h2>
+
+    <label for="street">Street: </label>
+    <input
+      class="form-control"
+      id="street"
+      type="text"
+      formControlName="street"
+    />
+
+    <label for="city">City: </label>
+    <input class="form-control" id="city" type="text" formControlName="city" />
+
+    <label for="state">State: </label>
+    <input
+      class="form-control"
+      id="state"
+      type="text"
+      formControlName="state"
+    />
+
+    <label for="zip">Zip Code: </label>
+    <input class="form-control" id="zip" type="text" formControlName="zip" />
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary mt-5"
+    [disabled]="!formBuilderProfileForm.valid"
+  >
+    Submit
+  </button>
+</form>

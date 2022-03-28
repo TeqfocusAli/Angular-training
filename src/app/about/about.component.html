@@ -1,0 +1,43 @@
+<h1>About page</h1>
+<h1>1. Two way binding</h1>
+<input type="text" [(ngModel)]="userName" />
+{{ userName }}
+<h1>2. ngClass</h1>
+<div [ngClass]="isSpecial ? 'special' : ''">Hello About page</div>
+
+<h1>3. ngStyle</h1>
+<div [ngStyle]="currentStyles">
+  This div is initially italic, normal weight, and extra large (24px).
+</div>
+
+<h1>9. Custom directive</h1>
+<p appFont25>apply Custom directive about works!</p>
+
+<h1>4. Pipe</h1>
+<p>{{ "about Title" | uppercase }}</p>
+<h3>Custom Pipe</h3>
+<p>{{ 2 | add: 5:3 }}</p>
+
+<h1>5. ngIf</h1>
+<div *ngIf="condition">Content to render when condition is true.</div>
+<ng-template [ngIf]="condition"
+  ><div>ng-template Content to render when condition is true.</div></ng-template
+>
+
+<h1>6. ngIf else</h1>
+<div *ngIf="condition; else elseBlock">
+  Content to render when condition is true.
+</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+
+<h1>7. ngFor</h1>
+<div *ngFor="let item of items; let i = index">{{ i + 1 }}. {{ item }}</div>
+
+<h1>8. ngSwitch</h1>
+<div [ngSwitch]="currentItem.feature">
+  <div *ngSwitchCase="'stout'">1. stout</div>
+  <div *ngSwitchCase="'slim'">2. slim</div>
+  <div *ngSwitchCase="'vintage'">3. vintage</div>
+  <div *ngSwitchCase="'bright'">4. bright</div>
+  <div *ngSwitchDefault>default switch</div>
+</div>
