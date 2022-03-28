@@ -25,6 +25,7 @@ import { FatherComponent } from './father/father.component';
 import { SonComponent } from './son/son.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { FeatureComponent } from './feature/feature.component';
+import { ObsSubComponent } from './obs-sub/obs-sub.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FeatureComponent } from './feature/feature.component';
     SonComponent,
     HooksComponent,
     FeatureComponent,
+    ObsSubComponent,
   ],
   imports: [
     BrowserModule,

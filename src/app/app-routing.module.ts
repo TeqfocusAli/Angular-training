@@ -16,6 +16,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FatherComponent } from './father/father.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { FeatureComponent } from './feature/feature.component';
+import { ObsSubComponent } from './obs-sub/obs-sub.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/about', pathMatch: 'full' },
@@ -68,6 +69,10 @@ const routes: Routes = [
   {
     path: 'features',
     component: FeatureComponent,
+  },
+  {
+    path: 'obs-sub',
+    component: ObsSubComponent,
   },
 ];
 
